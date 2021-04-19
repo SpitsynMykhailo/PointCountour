@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
- 
+    int r;
     Point p;
     int a;
     getCont(&a);
