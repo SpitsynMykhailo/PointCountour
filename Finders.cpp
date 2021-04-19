@@ -4,57 +4,57 @@ using namespace std;
 
 int wherePoint(int* a, Point p)
 {
-    Point v;
-    v.x = 0;
-    v.y = 0;
-    Point v2;
-    v2.x = *a;
-    v2.y = *a;
-    Point v3;
-    v3.x = -*a;
-    v3.y = *a;
+    Point pointOrigin;
+    pointOrigin.x = 0;
+    pointOrigin.y = 0;
+    Point pointPlusX;
+    pointPlusX.x = *a;
+    pointPlusX.y = *a;
+    Point pointMinusX;
+    pointMinusX.x = -*a;
+    pointMinusX.y = *a;
 
-    int minX = v.x, maxX = v.x;
-    int minY = v.y, maxY = v.y;
+    int minX = pointOrigin.x, maxX = pointOrigin.x;
+    int minY = pointOrigin.y, maxY = pointOrigin.y;
 
     //Min Max X
-    if (v2.x < minX)
+    if (pointPlusX.x < minX)
     {
-        minX = v2.x;
+        minX = pointPlusX.x;
     }
-    if (v3.x < minX)
+    if (pointMinusX.x < minX)
     {
-        minX = v3.x;
+        minX = pointMinusX.x;
     }
 
-    if (v2.x > maxX)
+    if (pointPlusX.x > maxX)
     {
-        maxX = v2.x;
+        maxX = pointPlusX.x;
     }
-    if (v3.x > maxX)
+    if (pointMinusX.x > maxX)
     {
-        maxX = v3.x;
+        maxX = pointMinusX.x;
     }
 
 
 
     //Min Max Y
-    if (v2.y < minY)
+    if (pointPlusX.y < minY)
     {
-        minY = v2.y;
+        minY = pointPlusX.y;
     }
-    if (v3.y < minY)
+    if (pointMinusX.y < minY)
     {
-        minY = v3.y;
+        minY = pointMinusX.y;
     }
 
-    if (v2.y > maxY)
+    if (pointPlusX.y > maxY)
     {
-        maxY = v2.y;
+        maxY = pointPlusX.y;
     }
-    if (v3.y > maxY)
+    if (pointMinusX.y > maxY)
     {
-        maxY = v3.y;
+        maxY = pointMinusX.y;
     }
 
     //Kvadrat
@@ -96,17 +96,17 @@ int wherePoint(int* a, Point p)
     }
 
     //pravo levo 
-    if ((p.x == v.x) && (p.y == v.y))
+    if ((p.x == pointOrigin.x) && (p.y == pointOrigin.y))
     {
         return 0;
     }
 
-    if ((p.x == v2.x) && (p.y == v2.y))
+    if ((p.x == pointPlusX.x) && (p.y == pointPlusX.y))
     {
         return 0;
     }
 
-    if ((p.x == v3.x) && (p.y == v3.y))
+    if ((p.x == pointMinusX.x) && (p.y == pointMinusX.y))
     {
         return 0;
     }
