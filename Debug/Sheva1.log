@@ -1,7 +1,3 @@
 ﻿  Finders.cpp
-  Getters.cpp
-  Sheva1.cpp
-D:\Program\Sheva1\Sheva1\Sheva1.cpp(11,11): warning C4101: p: неиспользованная локальная переменная
-  Создание кода...
 D:\Program\Sheva1\Sheva1\Finders.cpp(118): warning C4715: wherePoint: значение возвращается не при всех путях выполнения
   Sheva1.vcxproj -> D:\Program\Sheva1\Debug\Sheva1.exe
