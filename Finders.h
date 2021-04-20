@@ -3,4 +3,4 @@
 #include <iostream>
 using namespace std;
 
-int wherePoint(int* a, Point p);
+int wherePoint(int a, Point p);

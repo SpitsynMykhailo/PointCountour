@@ -2,116 +2,77 @@
 #include <iostream>
 using namespace std;
 
-int wherePoint(int* a, Point p)
+int wherePoint(int a, Point p)
 {
-    Point pointOrigin;
-    pointOrigin.x = 0;
-    pointOrigin.y = 0;
-    Point pointPlusX;
-    pointPlusX.x = *a;
-    pointPlusX.y = *a;
-    Point pointMinusX;
-    pointMinusX.x = -*a;
-    pointMinusX.y = *a;
+    Point contourPoint1;
+    contourPoint1.x = 0;
+    contourPoint1.y = 0;
+    Point contourPoint2;
+    contourPoint2.x = a;
+    contourPoint2.y = a;
+    Point contourPoint3;
+    contourPoint3.x = -a;
+    contourPoint3.y = a;
 
-    int minX = pointOrigin.x, maxX = pointOrigin.x;
-    int minY = pointOrigin.y, maxY = pointOrigin.y;
+   
+    float minX = -a,maxX=a,minY=0,maxY=a;
 
-    //Min Max X
-    if (pointPlusX.x < minX)
-    {
-        minX = pointPlusX.x;
-    }
-    if (pointMinusX.x < minX)
-    {
-        minX = pointMinusX.x;
-    }
-
-    if (pointPlusX.x > maxX)
-    {
-        maxX = pointPlusX.x;
-    }
-    if (pointMinusX.x > maxX)
-    {
-        maxX = pointMinusX.x;
-    }
-
-
-
-    //Min Max Y
-    if (pointPlusX.y < minY)
-    {
-        minY = pointPlusX.y;
-    }
-    if (pointMinusX.y < minY)
-    {
-        minY = pointMinusX.y;
-    }
-
-    if (pointPlusX.y > maxY)
-    {
-        maxY = pointPlusX.y;
-    }
-    if (pointMinusX.y > maxY)
-    {
-        maxY = pointMinusX.y;
-    }
-
-    //Kvadrat
+    //Clipping a rectangle
     if ((p.x < minX) || (p.x > maxX) || (p.y < minY) || (p.y > maxY))
     {
         return 1;
     }
 
-
+    //Position determination
     if (p.x > 0)
     {
         if (p.x > p.y)
         {
             return 1;
         }
-        if (p.x < p.y)
-        {
-            return -1;
-        }
-        if (p.x == p.y)
+        else if( (p.x == p.y)||(p.y==a))
         {
             return 0;
         }
+        else if (p.x < p.y)
+        {
+            return -1;
+        }
+        
     }
-    if (p.x < 0)
-    {
-        if (-p.x < p.y)
+     else if (p.x < 0)
+       {
+        if ((-p.x == p.y) || (p.y == a))
+        {
+            return 0;
+        }
+        else if (-p.x < p.y)
         {
             return 1;
         }
-        if (-p.x > p.y)
+        else if (-p.x > p.y)
         {
             return -1;
         }
-        if (-p.x == p.y)
-        {
-            return 0;
-        }
-    }
+        
+     }
 
-    //pravo levo 
-    if ((p.x == pointOrigin.x) && (p.y == pointOrigin.y))
+    if ((p.x == contourPoint1.x) && (p.y == contourPoint1.y))
     {
         return 0;
     }
 
-    if ((p.x == pointPlusX.x) && (p.y == pointPlusX.y))
+     else if ((p.x == contourPoint2.x) && (p.y == contourPoint2.y))
     {
         return 0;
     }
 
-    if ((p.x == pointMinusX.x) && (p.y == pointMinusX.y))
+     else if ((p.x == contourPoint3.x) && (p.y == contourPoint3.y))
     {
         return 0;
     }
 
-    if ((p.x == 0) && (p.y == *a))
+    else if ((p.x == 0) && (p.y == a))
     {
         return 0;
     }

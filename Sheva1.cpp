@@ -7,10 +7,9 @@ using namespace std;
 
 int main()
 {
-    int r;
     Point p;
     int a;
     getCont(&a);
-    cout << wherePoint(&a, getPoint());
+    cout << wherePoint(a, getPoint());
 }
     
