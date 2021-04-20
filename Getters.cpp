@@ -20,9 +20,9 @@ Point getPoint()
 {
     Point p;
 
-    cout << "Enter point parameters X: " << endl;
+    cout << "Enter point parameters X:  " << endl;
     cin >> p.x;
-    cout << "Enter point parameters Y: " << endl;
+    cout << "Enter point parameters Y:  " << endl;
     cin >> p.y;
     return  p;
 }
