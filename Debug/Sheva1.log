@@ -1,3 +1,14 @@
 ﻿  Finders.cpp
-D:\Program\Sheva1\Sheva1\Finders.cpp(118): warning C4715: wherePoint: значение возвращается не при всех путях выполнения
+D:\Program\Sheva1\Sheva1\Finders.cpp(11,23): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\Program\Sheva1\Sheva1\Finders.cpp(12,23): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\Program\Sheva1\Sheva1\Finders.cpp(14,23): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\Program\Sheva1\Sheva1\Finders.cpp(15,23): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\Program\Sheva1\Sheva1\Finders.cpp(18,16): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\Program\Sheva1\Sheva1\Finders.cpp(18,25): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+D:\Program\Sheva1\Sheva1\Finders.cpp(18,39): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  Getters.cpp
+  Sheva1.cpp
+D:\Program\Sheva1\Sheva1\Sheva1.cpp(10,11): warning C4101: p: неиспользованная локальная переменная
+  Создание кода...
+D:\Program\Sheva1\Sheva1\Finders.cpp(80): warning C4715: wherePoint: значение возвращается не при всех путях выполнения
   Sheva1.vcxproj -> D:\Program\Sheva1\Debug\Sheva1.exe
